@@ -17,11 +17,25 @@ init: function () {
 var elem = document.documentElement;
 var marker = document.querySelector("#marker");
 var fullbutton = document.querySelector("#fullscreen");
+var button = document.querySelector("#mutebutton");
+var Video_1 = document.querySelector("#Video_Asset_1");
 marker.addEventListener("markerFound", function (evt) {
 markerFound = 1;
+Video_1.play();
 });
 marker.addEventListener("markerLost", function (evt) {
 markerFound = 0;
+Video_1.pause();
+});
+button.addEventListener("click", function(evt){
+console.log("button clicked")
+if(Video_1.muted==true){
+button.innerHTML="Mute";
+Video_1.muted=false;
+}else{
+button.innerHTML="Unmute";
+Video_1.muted=true;
+}
 });
 
         fullbutton.addEventListener("click", function (evt) {
@@ -86,6 +100,12 @@ if (markerFound == 1) {
 <!-- BEGIN: Middle HTML -->
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
 
+        <div style='position: absolute; bottom: 10px; right: 30px; width:100%; text-align: center; z-index: 1;'>      
+            <button id="mutebutton" style='position: absolute; bottom: 10px'>
+                Unmute
+            </button>
+        </div>
+
         <div style='position: absolute; bottom: 5px; left: 30px; width:100%; text-align: right; z-index: 1;'>
             <input type="image" id="fullscreen" src="../fullscreen.png" style='position: absolute; bottom: 0px; right: 35px;'>
             </input>
@@ -98,6 +118,7 @@ if (markerFound == 1) {
 
 <!-- BEGIN: Unity Compiled Assets -->
 <a-assets>
+<video id="Video_Asset_1" autoplay="false" loop crossorigin="anonymous" src="videos/Rathalos.mp4" webkit-playsinline playsinline controls muted></video>
 </a-assets>
 <!-- END: Unity Compiled Assets -->
 <!-- BEGIN: Add Image Target (marker) -->
@@ -107,6 +128,8 @@ if (markerFound == 1) {
 <!-- BEGIN: Unity Compiled Objects -->
 <a-box width="0.26431" height="0.26431" depth="0.26431" class="intersectable" position="-0.279 0 0.334" rotation="0 0 0" color="#FFFFFF" 
 ></a-box>
+<a-video width="1" height="1" src="#Video_Asset_1" class="intersectable" position="0 0 0" rotation="0 0 0" color="#FFFFFF" 
+></a-video>
 <!-- END: Unity Compiled Objects -->
 
 <!-- BEGIN: Bottom HTML -->
