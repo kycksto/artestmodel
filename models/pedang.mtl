@@ -10,4 +10,4 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd C:\\Users\\Jakoeb\\Documents\\Studio\\Kyck Studio\\Ad Astra Collectible Card\\New Unity Project\\Assets\\Blink\\Art\\Weapons\\LowPoly\\FreeSwords\\Sword1\\Textures\\Sword1_Albedo_Bronze.png
+map_Kd textures/Sword1_Albedo_Bronze.png
