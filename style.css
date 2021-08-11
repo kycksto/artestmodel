@@ -1,8 +1,9 @@
 ﻿.buttonUnmute  {
   position: absolute;
-  bottom: 10px;
-  background-image: #ffffff;
+  bottom: 30px;
+  color: #737373;
+  background-color: #ffffff;
   padding: 8px;
   border-radius: 18px;
-  border-color: #7d807f;
+  border-color: #737373;
 }
