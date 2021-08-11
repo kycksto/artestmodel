@@ -119,14 +119,7 @@ if (markerFound == 1) {
 
 
 </a-scene>
-<script type="text/javascript">
-    const video = document.getElementById("arjs-video");
 
-    video.addEventListener("play", function() {
-        const loader = document.querySelector(".loader");
-        loader.className += " hidden";
-    });
-</script>
 
 <!--script type="text/javascript">
     window.addEventListener("load", function () {
@@ -136,4 +129,12 @@ if (markerFound == 1) {
 </script-->
 
 </body>
+<script type="text/javascript">
+    const video = document.getElementById("arjs-video");
+
+    video.addEventListener("play", function() {
+        const loader = document.querySelector(".loader");
+        loader.className += " hidden";
+    });
+</script>
 </html><!-- END: Bottom HTML -->
