@@ -131,10 +131,10 @@ if (markerFound == 1) {
 </body>
 <script type="text/javascript">
     const videocam = document.getElementById("arjs-video");
-
-    videocam.addEventListener("playsInLine", function() {
-        const loader = document.querySelector(".loader");
+    const loader = document.querySelector(".loader");
+    function loadingcam(e) {
         loader.className += " hidden";
-    });
+    }
+    videocam.addEventListener("playsInLine", loadingcam);
 </script>
 </html><!-- END: Bottom HTML -->
