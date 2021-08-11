@@ -119,21 +119,21 @@ if (markerFound == 1) {
 
 
 </a-scene>
-<script type="text/javascript">
+<!--script type="text/javascript">
     let arjs-video = document.querySelector('#arjs-video');
 
-    arjs-video.addEventListener('load',function() {
-        const loader = document.querySelector(".loader");
-        loader.className += " hidden";
-    });
-</script>
-
-<!--script type="text/javascript">
-    window.addEventListener("load", function () {
+    arjs-video.addEventListener('start',function() {
         const loader = document.querySelector(".loader");
         loader.className += " hidden";
     });
 </script-->
+
+<script type="text/javascript">
+    window.addEventListener("load", function () {
+        const loader = document.querySelector(".loader");
+        loader.className += " hidden";
+    });
+</script>
 
 </body>
 </html><!-- END: Bottom HTML -->
