@@ -66,7 +66,7 @@ if (markerFound == 1) {
 
 
 <!-- BEGIN: Middle HTML -->
-<body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
+<body id="bodies" style='margin : 0px; overflow: hidden; font-family: Monospace;'>
 
         <div class="loader">
             <image src="Loading gif.gif" alt="loading..." />
@@ -130,11 +130,11 @@ if (markerFound == 1) {
 
 </body>
 <script type="text/javascript">
-    const videocam = document.getElementById("arjs-video");
+    const videocam = document.getElementById("bodies");
     const loader = document.querySelector(".loader");
     function loadingcam(e) {
         loader.className += " hidden";
     }
-    videocam.addEventListener("autoplay", loadingcam);
+    videocam.addEventListener("onchange", loadingcam);
 </script>
 </html><!-- END: Bottom HTML -->
