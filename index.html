@@ -64,8 +64,13 @@ if (markerFound == 1) {
 
 <link rel="stylesheet" href="style.css">
 
+
 <!-- BEGIN: Middle HTML -->
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
+
+        <div class="loader">
+            <image src="Loading gif.gif" alt="loading..." />
+        </div>
 
         <div style='position: absolute; 
                     bottom: 10px; 
@@ -78,7 +83,7 @@ if (markerFound == 1) {
             </button>
         </div>
 
-       
+        
 
         <!-- <a-scene embedded arjs='debugUIEnabled: false; sourceType: video; sourceUrl:../../data/videos/headtracking.mp4;'> -->
             <a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam' vr-mode-ui='enabled: false'>
@@ -96,8 +101,8 @@ if (markerFound == 1) {
 <!-- END: Add Image Target (marker) -->
 
 <!-- BEGIN: Unity Compiled Objects -->
-<a-box width="0.26431" height="0.26431" depth="0.26431" class="intersectable" position="0 0.5 0" rotation="0 0 0" color="#FFFFF0" 
-></a-box>
+<!--a-box width="0.26431" height="0.26431" depth="0.26431" class="intersectable" position="4 0.5 0" rotation="0 0 0" color="#FFFFF0" 
+></a-box-->
 <a-video width="1.7" height="1" src="#Video_Asset_1" class="intersectable" position="0 0.2 0" rotation="270 0 0" color="#FFFFFF" 
 ></a-video>
 <!--a-entity gltf-model="#sword"
@@ -108,12 +113,18 @@ if (markerFound == 1) {
 
 <!-- BEGIN: Bottom HTML -->
 </a-marker>
-<a-light type="point" color="#acfcfa" position="0 0 20" look-at="Video_Asset_1"></a-light>
 <a-light type="spot" color="#FF0000" position="-20 0 0" look-at="Video_Asset_1"></a-light>
 <a-light type="point" color="#00FF00" position="0 5 0"></a-light>
 <a-entity camera></a-entity>
 
 
 </a-scene>
+<script type="text/javascript">
+    window.addEventListener("load", function () {
+        const loader = document.querySelector(".loader");
+        loader.className += " hidden";
+    });
+</script>
+
 </body>
 </html><!-- END: Bottom HTML -->
