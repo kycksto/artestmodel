@@ -130,9 +130,7 @@ if (markerFound == 1) {
 
 </body>
 <script type="text/javascript">
-    const videocam = document.getElementById("bodies");
-    
-    videocam.addEventListener("onchange", function() {
+    window.addEventListener("onchange", function() {
     const loader = document.querySelector(".loader");
         loader.className += " hidden";
     });
