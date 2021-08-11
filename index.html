@@ -120,7 +120,8 @@ if (markerFound == 1) {
 
 </a-scene>
 <script type="text/javascript">
-    document.getElementById("arjs-video").addEventListener("load", function () {
+    document.getElementById("arjs-video").addEventListener("load", myFunction); 
+        function myFunction() {
         const loader = document.querySelector(".loader");
         loader.className += " hidden";
     });
