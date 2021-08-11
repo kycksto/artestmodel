@@ -122,7 +122,7 @@ if (markerFound == 1) {
 <script type="text/javascript">
     const webcamon = document.getElementById("arjs-video");
 
-    webcamon.addEventListener("canplay",function(e) {
+    webcamon.addEventListener("loadeddata",function(e) {
         const loader = document.querySelector(".loader");
         loader.className += " hidden";
     });
